@@ -20,6 +20,9 @@ body {
   background: var(--White);
 }
 #container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 75vw;
   margin: auto;
 }
@@ -34,7 +37,6 @@ h2 {
 }
 #preparationTimeBox {
   background: var(--Rose50);
-  margin-top: 1rem;
   padding: 15px 30px;
   border-radius: 25px;
 }
@@ -72,15 +74,21 @@ h2 {
 #instructionsBox ol {
   padding: 1rem;
 }
-#nutritionBox {
-  margin: 1rem 0;
+#instructionsBox li {
+  margin-bottom: 15px;
+}
+#instructionsBox li::marker {
+  color: var(--Rose800);
+  font-weight: bold;
 }
 #nutritionBox {
   color: var(--Brown800);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin: 1rem 0;
 }
 #nutritionalInformation {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -97,4 +105,22 @@ body #recipeImage {
 }
 .nutritionalInformationText {
   width: 5rem;
+}
+
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+
+  }
+  #container{
+    width: 60vw;
+    max-width: 1000px;
+  }
+  #recipeImage {
+    max-width: 70vw;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
 }
